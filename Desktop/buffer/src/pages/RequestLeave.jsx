@@ -2,6 +2,7 @@ import { useState } from "react";
 import { CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, ChevronRight, Calendar, File, Upload, Clock, AlertCircle, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import UserDashboard from "./UserDashboard";
+import MyLeaves from "./MyLeaves";
 import { Navigate } from "react-router-dom";
 
 export default function RequestLeave() {
@@ -73,8 +74,8 @@ export default function RequestLeave() {
                 <nav className="flex-1 py-6">
                     {[
                         { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
-                        { icon: FileText, label: "Request Leave", active: true },
-                        { icon: Calendar, label: "My Leaves" },
+                        { icon: FileText, label: "Request Leave", path: "/request-leave", active: true },  
+                        { icon: Calendar, label: "My Leaves", path:  "/my-leaves" },                
                         { icon: Bell, label: "Notifications" },
                     ].map((item, idx) => (
                         <Link
@@ -99,19 +100,19 @@ export default function RequestLeave() {
                         <span>Sign Out</span>
                     </Link>
                     <div className="bg-white/10 rounded-lg p-3 mb-4">
-            <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                    <User className="w-5 h-5 text-[#005597]" />
-                </div>
-                <div>
-                    <p className="text-sm font-medium text-white">Alex Thompson</p>
-                    <p className="text-xs text-white/70">Web Designer</p>
-                </div>
-            </div>
-        </div>
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <User className="w-5 h-5 text-[#005597]" />
+                            </div>
+                            <div>
+                                <p className="text-sm font-medium text-white">Alex Thompson</p>
+                                <p className="text-xs text-white/70">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                
+
             </div>
 
             {/* Main Content */}

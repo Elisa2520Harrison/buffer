@@ -1,9 +1,9 @@
 import { useState } from "react";
-import {
-    CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, ChevronRight, PlusCircle, Eye, Calendar, ChevronDown, Menu, X
-} from "lucide-react";
+import {CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, ChevronRight, PlusCircle, Eye, Calendar, ChevronDown, Menu, X} from "lucide-react";
 import { Link, Navigate } from "react-router-dom";
 import RequestLeave from "./RequestLeave";
+import MyLeaves from "./MyLeaves";
+
 
 
 export default function UserDashboard() {

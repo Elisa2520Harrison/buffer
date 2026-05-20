@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, Calendar, Search, ChevronDown, Menu, X, Eye, Edit, XCircle, CheckCircle, Clock, AlertCircle} from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, Navigate} from "react-router-dom";
 
 export default function MyLeaves() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
