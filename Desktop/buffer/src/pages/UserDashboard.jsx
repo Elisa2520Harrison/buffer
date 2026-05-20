@@ -1,5 +1,6 @@
 import { useState } from "react";
-import {CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, ChevronRight, PlusCircle, Eye, Calendar, ChevronDown, Menu, X
+import {
+    CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, ChevronRight, PlusCircle, Eye, Calendar, ChevronDown, Menu, X
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -72,8 +73,8 @@ export default function UserDashboard() {
                             key={idx}
                             to="#"
                             className={`flex items-center gap-3 px-5 py-2.5 text-sm transition mx-2 rounded-lg ${item.active
-                                    ? "bg-white/20 text-white"
-                                    : "text-white/70 hover:bg-white/10 hover:text-white"
+                                ? "bg-white/20 text-white"
+                                : "text-white/70 hover:bg-white/10 hover:text-white"
                                 }`}
                         >
                             <item.icon className="w-4 h-4" />
@@ -143,7 +144,7 @@ export default function UserDashboard() {
                 <div className="p-6">
                     <div className="mb-6">
                         <h1 className="text-2xl font-bold text-[#1a1c20]">
-                            Good morning, Alex 
+                            Good morning, Alex
                         </h1>
                         <p className="text-[#414751] text-sm mt-1">
                             You have 23 days of leave remaining this cycle.
@@ -151,7 +152,7 @@ export default function UserDashboard() {
                     </div>
 
                     {/* Stats Cards */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
                         <div className="bg-[#005597] rounded-xl p-4 text-white">
                             <p className="text-xs opacity-80">ANNUAL LEAVE</p>
                             <p className="text-2xl font-bold mt-1">15 <span className="text-sm font-normal">of 20 days</span></p>
@@ -240,8 +241,26 @@ export default function UserDashboard() {
                         </div>
                     </div>
 
-                    {/* Recent Leave Requests Table */}
+                    {/* Upcoming Leave */}
                     <div className="bg-[#f9f9ff] rounded-xl shadow-sm border border-[#c1c7d2] mb-8">
+                        <div className="p-5 border-b border-[#c1c7d2]">
+                            <h3 className="font-semibold text-[#1a1c20]">Upcoming Leave</h3>
+                        </div>
+                        <div className="p-5">
+                            <div className="flex items-center justify-between p-4 bg-[#d3e4ff] rounded-lg">
+                                <div>
+                                    <p className="font-semibold text-[#1a1c20]">Summer Vacation</p>
+                                    <p className="text-sm text-[#414751]">Aug 15 – Aug 20 · 5 days</p>
+                                </div>
+                                <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
+                                    APPROVED
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Recent Leave Requests Table */}
+                    <div className="bg-[#f9f9ff] rounded-xl shadow-sm border border-[#c1c7d2]">
                         <div className="p-5 border-b border-[#c1c7d2]">
                             <h3 className="font-semibold text-[#1a1c20]">Recent Leave Requests</h3>
                         </div>
@@ -278,24 +297,6 @@ export default function UserDashboard() {
                                     ))}
                                 </tbody>
                             </table>
-                        </div>
-                    </div>
-
-                    {/* Upcoming Leave */}
-                    <div className="bg-[#f9f9ff] rounded-xl shadow-sm border border-[#c1c7d2]">
-                        <div className="p-5 border-b border-[#c1c7d2]">
-                            <h3 className="font-semibold text-[#1a1c20]">Upcoming Leave</h3>
-                        </div>
-                        <div className="p-5">
-                            <div className="flex items-center justify-between p-4 bg-[#d3e4ff] rounded-lg">
-                                <div>
-                                    <p className="font-semibold text-[#1a1c20]">Summer Vacation</p>
-                                    <p className="text-sm text-[#414751]">Aug 15 – Aug 20 · 5 days</p>
-                                </div>
-                                <span className="px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full">
-                                    APPROVED
-                                </span>
-                            </div>
                         </div>
                     </div>
                 </div>
