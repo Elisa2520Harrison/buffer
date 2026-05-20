@@ -76,7 +76,7 @@ export default function RequestLeave() {
                         { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
                         { icon: FileText, label: "Request Leave", path: "/request-leave", active: true },  
                         { icon: Calendar, label: "My Leaves", path:  "/my-leaves" },                
-                        { icon: Bell, label: "Notifications" },
+                        { icon: Bell, label: "Notifications", path: "/notifications" },
                     ].map((item, idx) => (
                         <Link
                             key={idx}
@@ -91,7 +91,7 @@ export default function RequestLeave() {
                 </nav>
 
                 <div className="border-t border-white/10 p-5 space-y-2">
-                    <Link to="#" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
+                    <Link to="/settings" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
                         <Settings className="w-4 h-4" />
                         <span>Settings</span>
                     </Link>

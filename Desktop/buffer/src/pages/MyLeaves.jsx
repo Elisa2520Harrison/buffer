@@ -60,7 +60,7 @@ export default function MyLeaves() {
                         { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
                         { icon: FileText, label: "Request Leave", path: "/request-leave" },
                         { icon: Calendar, label: "My Leaves", path: "/my-leaves", active: true },
-                        { icon: Bell, label: "Notifications", path: "#" },
+                        { icon: Bell, label: "Notifications", path: "/notifications" },
                     ].map((item, idx) => (
                         <Link
                             key={idx}
@@ -76,7 +76,16 @@ export default function MyLeaves() {
                 </nav>
 
                 <div className="border-t border-white/10 p-5">
-                    <div className="bg-white/10 rounded-lg p-3 mb-4">
+                   
+                    <Link to="/settings" className="flex items-center gap-3 text-white/70 hover:text-white text-sm mb-2">
+                        <Settings className="w-4 h-4" />
+                        <span>Settings</span>
+                    </Link>
+                    <Link to="/login" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
+                        <LogOut className="w-4 h-4" />
+                        <span>Sign Out</span>
+                    </Link>
+                     <div className="bg-white/10 rounded-lg p-3 mb-4">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
                                 <User className="w-5 h-5 text-[#005597]" />
@@ -87,14 +96,6 @@ export default function MyLeaves() {
                             </div>
                         </div>
                     </div>
-                    <Link to="#" className="flex items-center gap-3 text-white/70 hover:text-white text-sm mb-2">
-                        <Settings className="w-4 h-4" />
-                        <span>Settings</span>
-                    </Link>
-                    <Link to="/login" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
-                        <LogOut className="w-4 h-4" />
-                        <span>Sign Out</span>
-                    </Link>
                 </div>
             </div>
 

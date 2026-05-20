@@ -88,7 +88,7 @@ export default function UserDashboard() {
 
                 {/* Bottom Menu */}
                 <div className="border-t border-white/10 p-5 space-y-2">
-                    <Link to="#" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
+                    <Link to="/settings" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
                         <Settings className="w-4 h-4" />
                         <span>Settings</span>
                     </Link>
