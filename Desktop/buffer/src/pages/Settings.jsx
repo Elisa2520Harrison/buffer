@@ -113,7 +113,18 @@ export default function Settings() {
 
                 <div className="border-t border-white/10 p-5">
                     {/* User Profile Card */}
-                    <div className="bg-white/10 rounded-lg p-3 mb-4">
+                    
+                    {/* Settings link - right here above Sign Out */}
+                    <Link to="/settings" className="flex items-center gap-3 text-white/70 hover:text-white text-sm mb-2">
+                        <SettingsIcon className="w-4 h-4" />
+                        <span>Settings</span>
+                    </Link>
+                    
+                    <Link to="/login" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
+                        <LogOut className="w-4 h-4" />
+                        <span>Sign Out</span>
+                    </Link>
+                     <div className="bg-white/10 rounded-lg p-3 mb-4">
                         <div className="flex items-center gap-3">
                             <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center overflow-hidden">
                                 {photoPreview ? (
@@ -128,17 +139,6 @@ export default function Settings() {
                             </div>
                         </div>
                     </div>
-                    
-                    {/* Settings link - right here above Sign Out */}
-                    <Link to="/settings" className="flex items-center gap-3 text-white/70 hover:text-white text-sm mb-2">
-                        <SettingsIcon className="w-4 h-4" />
-                        <span>Settings</span>
-                    </Link>
-                    
-                    <Link to="/login" className="flex items-center gap-3 text-white/70 hover:text-white text-sm">
-                        <LogOut className="w-4 h-4" />
-                        <span>Sign Out</span>
-                    </Link>
                 </div>
             </div>
 

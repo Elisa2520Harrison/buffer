@@ -4,6 +4,7 @@ import RequestLeave from "./pages/RequestLeave";
 import MyLeaves from "./pages/MyLeaves";
 import Notifications from "./pages/Notifications";
 import Settings from "./pages/Settings";
+import AdminDashboard from "./pages/AdminDashboard";
 
 const router = createBrowserRouter([
     { path: "/", element: <Navigate to="/dashboard" replace /> },
@@ -12,6 +13,7 @@ const router = createBrowserRouter([
     { path: "/my-leaves", element: <MyLeaves />},
     { path: "/notifications", element: <Notifications />},
     { path: "/settings", element: <Settings />},
+    { path: "/admin-dashboard", element: <AdminDashboard />},
 
 ]);
 

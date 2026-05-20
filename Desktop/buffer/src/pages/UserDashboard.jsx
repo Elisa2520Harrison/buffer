@@ -236,21 +236,21 @@ export default function UserDashboard() {
                                     <ChevronRight className="w-4 h-4 text-[#005597]" />
                                 </Link>
 
-                                <button className="w-full flex items-center justify-between p-3 bg-[#ededf4] hover:bg-[#e8e7ef] rounded-lg transition">
+                                <Link to="/my-leaves" className="w-full flex items-center justify-between p-3 bg-[#ededf4] hover:bg-[#e8e7ef] rounded-lg transition">
                                     <div className="flex items-center gap-3">
                                         <Eye className="w-4 h-4 text-[#414751]" />
                                         <span className="text-sm font-medium text-[#1a1c20]">View All Requests</span>
                                     </div>
                                     <ChevronRight className="w-4 h-4 text-[#414751]" />
-                                </button>
+                                </Link>
 
-                                <button className="w-full flex items-center justify-between p-3 bg-[#ededf4] hover:bg-[#e8e7ef] rounded-lg transition">
+                                <Link to="/notifications" className="w-full flex items-center justify-between p-3 bg-[#ededf4] hover:bg-[#e8e7ef] rounded-lg transition">
                                     <div className="flex items-center gap-3">
                                         <Bell className="w-4 h-4 text-[#414751]" />
                                         <span className="text-sm font-medium text-[#1a1c20]">Notifications</span>
                                     </div>
                                     <ChevronRight className="w-4 h-4 text-[#414751]" />
-                                </button>
+                                </Link>
                             </div>
                         </div>
                     </div>
