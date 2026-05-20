@@ -2,7 +2,9 @@ import { useState } from "react";
 import {
     CalendarDays, LayoutDashboard, FileText, Bell, LogOut, Settings, User, ChevronRight, PlusCircle, Eye, Calendar, ChevronDown, Menu, X
 } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
+import RequestLeave from "./RequestLeave";
+
 
 export default function UserDashboard() {
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -27,11 +29,12 @@ export default function UserDashboard() {
     ];
 
     const menuItems = [
-        { icon: LayoutDashboard, label: "Dashboard", active: true },
-        { icon: FileText, label: "Request Leave" },
-        { icon: Calendar, label: "My Leaves" },
-        { icon: Bell, label: "Notifications" },
+        { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
+        { icon: FileText, label: "Request Leave", path: "/request-leave" },
+        { icon: Calendar, label: "My Leaves", path: "/my-leaves" },
+        { icon: Bell, label: "Notifications", path: "/notifications" },
     ];
+
 
     return (
         <div className="h-screen flex flex-col md:flex-row overflow-hidden">
@@ -71,7 +74,7 @@ export default function UserDashboard() {
                     {menuItems.map((item, idx) => (
                         <Link
                             key={idx}
-                            to="#"
+                            to={item.path}
                             className={`flex items-center gap-3 px-5 py-2.5 text-sm transition mx-2 rounded-lg ${item.active
                                 ? "bg-white/20 text-white"
                                 : "text-white/70 hover:bg-white/10 hover:text-white"
@@ -93,6 +96,17 @@ export default function UserDashboard() {
                         <LogOut className="w-4 h-4" />
                         <span>Sign Out</span>
                     </Link>
+                    <div className="bg-white/10 rounded-lg p-3 mb-4">
+                        <div className="flex items-center gap-3">
+                            <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                                <User className="w-5 h-5 text-[#005597]" />
+                            </div>
+                            <div>
+                                <p className="text-sm font-medium text-white">Alex Thompson</p>
+                                <p className="text-xs text-white/70">Web Designer</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -131,7 +145,7 @@ export default function UserDashboard() {
                                     <User className="w-4 h-4 text-white" />
                                 </div>
                                 <div className="hidden sm:block">
-                                    <p className="text-sm font-medium text-[#1a1c20]">Alex Mensah</p>
+                                    <p className="text-sm font-medium text-[#1a1c20]">Alex Thompson</p>
                                     <p className="text-xs text-[#414751]">Software Engineer</p>
                                 </div>
                                 <ChevronDown className="w-4 h-4 text-[#414751]" />
@@ -214,13 +228,13 @@ export default function UserDashboard() {
                                 <h3 className="font-semibold text-[#1a1c20]">Quick Actions</h3>
                             </div>
                             <div className="p-5 space-y-3">
-                                <button className="w-full flex items-center justify-between p-3 bg-[#d3e4ff] hover:bg-[#a2c9ff] rounded-lg transition">
+                                <Link to="/request-leave" className="w-full flex items-center justify-between p-3 bg-[#d3e4ff] hover:bg-[#a2c9ff] rounded-lg transition">
                                     <div className="flex items-center gap-3">
                                         <PlusCircle className="w-4 h-4 text-[#005597]" />
                                         <span className="text-sm font-medium text-[#005597]">New Leave Request</span>
                                     </div>
                                     <ChevronRight className="w-4 h-4 text-[#005597]" />
-                                </button>
+                                </Link>
 
                                 <button className="w-full flex items-center justify-between p-3 bg-[#ededf4] hover:bg-[#e8e7ef] rounded-lg transition">
                                     <div className="flex items-center gap-3">
